@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout Code') {
       steps {
-        git 'https://github.com/venkat-git-v/citest.git'
+        git branch: 'main', url:'https://github.com/venkat-git-v/citest.git'
       }
     }
     stage('Build') {
@@ -25,4 +25,12 @@ pipeline {
       }
     }
   }
+}
+post{
+   success{
+  bat 'echo "build successful"'
+}
+failure{
+   bat 'echo "build failed"'
+}
 }
