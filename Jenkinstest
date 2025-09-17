@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-       bat 'echo 'Deploying...''
+       echo 'Deploying...'
         // Deployment commands, e.g., sh 'make deploy'
       }
     }
