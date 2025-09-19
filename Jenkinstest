@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        echo 'Building...'
+        echo 'Building.. ,,.'
         // Commands to build your app, e.g., sh 'make build'
       }
     }
